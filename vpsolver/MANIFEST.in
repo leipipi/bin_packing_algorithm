@@ -1,0 +1,5 @@
+include README.md CHANGELOG.md COPYING LICENSE requirements.txt
+recursive-include pyvpsolver *
+recursive-include src *.cpp
+recursive-include src *.cxx
+recursive-include src *.hpp

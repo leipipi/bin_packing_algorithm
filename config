@@ -1,0 +1,21 @@
+loader ./CXLoader.so
+algorithm ./PaniDP.so 
+online false #use online approach  
+step_width 2 #skip tests
+test_type  maxMachineLoad #maxMachineLoad (all), waitingtime (online), lbOverhead (Kous only), analyzeMachines (all), processingTime (online) 
+dimensions 3
+epsilon 0.001
+jobs 200 			# max. number of jobs to schedule 
+machines 20 			# max. number of used machines 
+machine_size 1.0		# machines capacity
+runs 5			        # how often should be tested
+start_jobs 1            	# how much jobs should be placed in first test series
+file ./Datasets/anon_jobs.gwf 	# swf-file|nofile|c6|c0
+lower_bound 0.1			# lower bound of generated job vector component (only with nofile)
+upper_bound 0.3 		# upper bound of generated job vector component (only with nofile)
+lower_burst 500			# lower bound for bursts of generated jobs (only with nofile and online)
+upper_burst 3000		# upper bound for bursts of generated jobs (only with nofile and online)
+arrival_span 1500		# duration of arriving jobs
+random_job_selection true       # select the jobs randomly
+max_ram 64000			# amount of ram per machine in mib
+max_cpus 128			# amount of cores per machine
